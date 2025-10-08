@@ -5,7 +5,7 @@ import requests
 import argparse
 import socket
 
-argparse = argparse.ArgumentParser(description="Basic Information Gathering Tool", usage="python3 main.info -d DOMAIN [-s IP]")
+argparse = argparse.ArgumentParser(description="Information Gathering Tool", usage="python3 main.info -d DOMAIN [-s IP]")
 # Arguments
 argparse.add_argument("-d", "--domain", help="Enter the domain name", required=True)
 argparse.add_argument("-s", "--shodan", help="Enter the IP for shodan search")
@@ -108,7 +108,7 @@ try:
     geo_result += f"[+] State: {response['state']}" + '\n'
 except Exception as state:
     print(f"[-] Error Fetching Country {state}")
-    
+
 print(geo_result)
 
 print()
